@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <title>Trivia Test</title>
+  </head>
+  <body>
+    <h2 id="disply-name" class="displyName hide"></h2>
+    <div id="container" class="container">
+      <div id="start-card" class="user-name">
+        <input
+          type="text"
+          placeholder="Please enter your name"
+          name="user"
+          id="userName"
+        />
+        <button id="start-btn" class="next btn">Start</button>
+      </div>
+      <div id="question-container" class="hide">
+        <div id="question" class="question-text"></div>
+        <div id="answer-buttons" class="btn-grid"></div>
+
+        <div id="dragContainer" class="hide">
+          <div class="drag-area">
+            <div class="pick-list">
+              <div draggable="true" data-color="yello" class="box pick-item">
+                <div class="blue" data-color="blue"></div>
+              </div>
+              <div draggable="true" data-color="blue" class="box pick-item">
+                <div class="purple" data-color="purple"></div>
+              </div>
+              <div draggable="true" data-color="purple" class="box pick-item">
+                <div class="yello" data-color="yello"></div>
+              </div>
+            </div>
+            <div class="drop-list">
+              <div draggable="true" id="yello" class="drop-item">Yello</div>
+              <div draggable="true" id="blue" class="drop-item">Blue</div>
+              <div draggable="true" id="purple" class="drop-item">Purple</div>
+            </div>
+          </div>
+        </div>
+
+        <button id="next-btn" class="btn orange">Next</button>
+        <button id="next-btn2" class="btn orange hide">Next</button>
+        <button id="end-btn" class="btn red hide">Submit & End Game</button>
+      </div>
+      <div id="results" class="results-div"></div>
+    </div>
+    <div id="page" class="page"></div>
+  </body>
+</html>
